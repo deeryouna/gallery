@@ -1,0 +1,84 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
+
+#gallery {
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	article {
+		width: 25%;
+		box-sizing: border-box;
+		float: left;
+		padding: 5px;
+
+		.inner {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 16px;
+
+			.pic {
+				width: 100%;
+				height: 150px;
+				background: #555;
+				margin-bottom: 20px;
+                transition: 0.5s;
+                opacity: 0.6;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+                    
+				}
+
+                &:hover{
+                    opacity: 1;
+                    cursor: pointer;                    
+                    transform: scale(0.99);
+                }
+			}
+
+			h2 {
+				font: 13px/1 "본고딕";
+				color: #444;
+				margin-bottom: 15px;
+				height: 60px;
+			}
+		}
+	}
+}
+
+#imgPop {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.75);
+	box-sizing: border-box;
+	padding: 10vw;
+
+	.pic {
+		width: 100%;
+		height: 100%;
+		background: #ece8e5;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	span {
+		font: bold 14px/1 "Noto Sans KR";
+		color: #ece8e5;
+		position: absolute;
+		bottom: 7vw;
+		right: 7vw;
+		cursor: pointer;
+	}
+}
